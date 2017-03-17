@@ -1,0 +1,27 @@
+﻿@using RazorTest.Models
+@model Product[]
+
+@{
+    ViewBag.Title = "Product List";
+}
+<table>
+    <tr>
+        <th>
+            <p>Product Name</p>
+        </th>
+        <th>
+            <p>Category</p>
+        </th>
+    </tr>
+    <tbody>
+        @foreach (Product pro in Model)
+        {
+            <tr>
+                <td> @pro.ProductName</td>
+                <td>$@pro.Category</td>
+            </tr>
+        }
+    </tbody>
+        
+    
+</table>
